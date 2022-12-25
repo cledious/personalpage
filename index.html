@@ -4,73 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./sass/style.css">
     <link rel="shortcut icon" href="./img/logo.icon.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Square+Peg&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Square+Peg&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=K2D&family=NTR&family=Teko&display=swap" rel="stylesheet">
     <title>CLEDIOUS</title>
 </head>
 <body>
-    <p id="up">
-    <audio src="./sounds/shrek-fairytale-calm-continuous-mix-ytmate.xyz.webm" autoplay="autoplay" loop="loop" ></audio>
     <header>
         <a id="logo" class="a1" href="./index.html">cledious</a>
-        <nav>
-            <ul id="menu">
-                <li><a href="./portfolio.html">portfolio</a>
-                    <!--<ul>
-                        <li><a href="2022">2022</a></li>
-                        <li><a href="2021">2021</a></li>
-                        <li><a href="2020">2020</a></li>
-                    </ul>-->
-                </li>
-                <li>
-                    <a href="curriculum.html">curriculum</a>
-                </li>
-                <li><a href="./contact.html">contact</a>
-                    <ul>
-                        <li><a href="./contact.html#number">number</a></li>
-                        <li><a href="./contact.html#email">email</a></li>
-                        <li><a href="./contact.html#github">github</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="to-contact">
+            <h3>
+                contact width me
+            </h3>
+            <input id="email" type="email">
+            <button type="submit" for="email" >send</button>
+        </div>
+        <nav id="menu">
+            <button class="drop-down menu"><img src="./img/Menu.svg" alt=""></button>
+            <!--<ul>
+                <li>ah</li>
+                <li>ahh</li>
+                <li>ahhh</li>
+            </ul>-->
         </nav>
     </header>
-        <main>
-            <div class="me">
-                <div class="me-info">
-                    <h1>
-                        Gustavo Osegueda Morales
-                    </h1>
-                    <p>
-                        I'm from costa rica, I'm 20 years old, I really like music, poetry, sculptures, paintings, and everything that is part of art.
-                    </p>
-                </div>
-            </div>
-            <section class="ref">
-                <article class="web">
-                    <h2>
-                        works &bull; web design
-                    </h2>
-                    <a class="biccas" href="https://biccas-page.vercel.app/">biccas</a>
-                    <a class="dalio" href="https://dalio-page.vercel.app/">dalio</a>
-                </article>
-                <article class="art">
-                    <h2>
-                        works &bull; my art
-                    </h2>
-                    <a href="https://www.instagram.com/letharch/?hl=en"><img src="./img/Diseño sin título (1).png" alt=""></a>
-                </article>
-            </section>
-        </main>
-        <footer>
-            <a id="footer-github" href="https://github.com/cledious"><img src="./img/github-logo.png" alt=""></a>
-        </footer>
-        <a href="#up" id="down">back to top</a>
+    <div class="search-bar-box">
+        <input type="search" name="search" id="search-bar" placeholder="search here whatever you want...">
+        <button type="submit" for="search">s</button> 
+    </div>
+    <nav id="category-box">
+        <div>
+            <h3>
+                categories
+            </h3>
+            <button>🡣</button>
+        </div>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+        <a href=""></a>
+    </nav>
+    <main>
+        <h1>
+            front end & artist
+        </h1>
+        <img src="./img/1671934634932.jpg" alt="">
+        <img src="./img/1671934634932.svg" alt="">
+    </main>
+    <section id="works">
+        <article class="w-alone">
+            <h2>works alone</h2>
+            <div></div>
+            <div></div>
+            <div></div>
+        </article>
+        <article class="w-others">
+            <h2>
+                works with co-workers
+            </h2>
+            <div></div>
+            <div></div>
+            <div></div>
+        </article>
+    </section>
 </body>
 </html>
