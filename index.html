@@ -10,15 +10,20 @@
     <title>CLEDIOUS</title>
 </head>
 <body>
+    <a href="#scroll-up" id="scroll-down"></a>
     <header>
         <a id="logo" class="a1" href="./index.html">cledious</a>
         <div class="to-contact">
             <h3>
                 contact width me
             </h3>
+            <img src="./img/image 1.svg" alt="">
             <input id="email" type="email">
             <button type="submit" for="email" >send</button>
         </div>
+        <button type="button" id="search-btn">
+            <img src="./img/🦆 icon _search_ (1).svg" alt="">
+        </button>
         <nav id="menu">
             <button class="drop-down menu"><img src="./img/Menu.svg" alt=""></button>
             <!--<ul>
@@ -28,22 +33,13 @@
             </ul>-->
         </nav>
     </header>
-    <div class="search-bar-box">
-        <input type="search" name="search" id="search-bar" placeholder="search here whatever you want...">
-        <button type="submit" for="search">s</button> 
+    <div id="search-box">
+        <input id="search-input" type="search">
+        <button id="search-submit" type="submit">
+            <img src="./img/search-logo.svg" alt="">
+        </button>
     </div>
-    <nav id="category-box">
-        <div>
-            <h3>
-                categories
-            </h3>
-            <button>🡣</button>
-        </div>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-        <a href=""></a>
-    </nav>
+    <div id="cover"></div>
     <main>
         <h1>
             front end & artist
@@ -51,21 +47,27 @@
         <img src="./img/1671934634932.jpg" alt="">
         <img src="./img/1671934634932.svg" alt="">
     </main>
+    <div class="triggers">
+        <button id="w-alone">
+            works alone
+        </button>
+        <button id="w-others">
+            works with co-workers
+        </button>
+    </div>
+    <a href="#scroll-down" id="scroll-up"></a>
     <section id="works">
-        <article class="w-alone">
-            <h2>works alone</h2>
-            <div></div>
-            <div></div>
-            <div></div>
+        <article class="w-alone" id="fe-works-alone">
+            <div><p>alone</p></div>
+            <div><p>alone</p></div>
+            <div><p>alone</p></div>
         </article>
-        <article class="w-others">
-            <h2>
-                works with co-workers
-            </h2>
-            <div></div>
-            <div></div>
-            <div></div>
+        <article class="w-others" id="fe-works-others">
+            <div><p>with others</p></div>
+            <div><p>with others</p></div>
+            <div><p>with others</p></div>
         </article>
     </section>
+    <script src="./main.js"></script>
 </body>
 </html>
