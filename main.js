@@ -4,9 +4,15 @@ document.getElementById("cover").addEventListener("click", hideSB);
 document.getElementById("w-alone").addEventListener("click", showAlone);
 document.getElementById("w-others").addEventListener("click", showOthers);
 
+//document.getElementById("menu-button").addEventListener("click",showMenu);
+
 searchBox = document.getElementById("search-box");
 inputSearch = document.getElementById("search-input");
+
 cover = document.getElementById("cover");
+
+//menuBox = document.getElementById("menu-links");
+
 //--------------------------- works_boxes
 wAlone_box = document.getElementById("fe-works-alone");
 wOthers_box = document.getElementById("fe-works-others");
@@ -43,4 +49,9 @@ function showOthers() {
 
     others_button.style.border = "2px solid #F29D38";
     alone_button.style.border = "none";
+}
+//=========================
+//function showMenu() {
+    menuBox.style.display = "block";
+    cover.style.display = "block";
 }

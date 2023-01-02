@@ -132,6 +132,47 @@ body {
                 mix-blend-mode: luminosity;
             }
         }
+        
+        #menu {
+            box-sizing: border-box;
+            @include clear-background;
+            li {
+                position: relative;
+                display: inline-block;
+                a {
+                    display: block;
+                    padding: 15px 20px;
+                    color: #353535;
+                    font-family: 'Open sans';
+                    text-decoration: none;
+                }
+                a:hover {
+                    color: #CE7D35;
+                    transition: all .3s;
+                }
+                #submenu {
+                    position: absolute;
+                    background-color: #333333;
+                    width: 120%;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity 1.5s;
+                li {
+                    a {
+                        display: block;
+                        padding: 15px;
+                        color: #fff;
+                        font-family: 'Open sans';
+                        text-decoration: none;
+                    }
+                }
+                }
+            }
+        }
+        #menu li:hover .submenu {
+            visibility: visible;
+            opacity: 1;
+        }
     }
     #search-box {
         z-index: 3;
@@ -168,20 +209,6 @@ body {
         background-color: #241632;
         display: none;
         transition: all 600ms
-    }
-    #menu {
-        @include clear-background;
-        box-sizing: border-box;
-    }
-    #menu:hover {
-        button {
-            img {
-                transition: all 300ms;
-                filter: blur(18px);
-                filter: brightness(30%);
-                mix-blend-mode: luminosity;
-            }
-        }
     }
     main {
         display: flex;
@@ -287,11 +314,11 @@ body {
 //================= animations
 
 @keyframes rotateall {
-    from {
+    0% {
         transform: rotate(0deg);
     }
-    to {
-        transform: rotate(89deg);
+    100% {
+        transform: rotate(90deg);
     }
 }
 @-webkit-keyframes sdb06 {
