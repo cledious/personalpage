@@ -51,7 +51,7 @@ function showOthers() {
     alone_button.style.border = "none";
 }
 //=========================
-//function showMenu() {
+function showMenu() {
     menuBox.style.display = "block";
     cover.style.display = "block";
 }
