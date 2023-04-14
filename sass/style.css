@@ -9,7 +9,7 @@ body {
   background-color: #EEE7DB;
   padding: 0% 8%;
 }
-body #scroll-up {
+body font-size #scroll-up {
   position: absolute;
   bottom: 80px;
   left: 50%;
@@ -92,26 +92,29 @@ body header .to-contact:hover {
 body header .to-contact:hover input, body header .to-contact:hover button, body header .to-contact:hover img {
   display: block;
 }
-body header #search-btn {
-  background-color: #EEE7DB;
-  margin-left: 35%;
-  color: whitesmoke;
-  height: auto;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 20px;
-  width: 35px;
-  height: 35px;
+body header #category {
+  background-color: #904A4A;
+  width: 10rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 15px;
 }
-body header #search-btn img {
-  width: 100%;
+body header #categoryBox {
+  display: none;
+  position: absolute;
+  top: 3.5rem;
+  right: 23.7%;
+  flex-direction: column;
+  width: 10rem;
+  align-items: center;
 }
-body header #search-btn:hover img {
-  transition: all 600ms;
-  filter: blur(18px);
-  filter: brightness(30%);
-  mix-blend-mode: luminosity;
+body header #categoryBox a {
+  color: whitesmoke;
+  background-color: #904A4A;
+  margin: 1px;
+  padding: 5px 10px;
 }
 body header #menu {
   box-sizing: border-box;
@@ -248,24 +251,66 @@ body #works {
   height: auto;
   justify-content: space-around;
   gap: 5%;
+  font-size: 30px;
 }
-body #works article {
-  display: block;
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+body #works a {
+  margin: 10px;
+  font-size: 2em;
+  text-align: center;
+  transition: all 300ms;
 }
-body #works article div {
-  display: block;
-  background-color: #904A4A;
-  opacity: 0.5;
-  width: 50rem;
-  height: 30rem;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
+body #works a:hover {
+  box-shadow: 0px 0px 30px #8A416D;
+  border-radius: 30px;
+  transition: all 600ms;
+}
+body #works a:nth-of-type(1) {
+  font-family: "Times New Roman";
+  text-transform: uppercase;
+  color: #BDBC8A;
+  background-color: rgb(156, 71, 71);
+  letter-spacing: 20px;
+}
+body #works a:nth-of-type(1) span {
+  color: yellow;
+  font-size: 0.6em;
+  font-weight: lighter;
+}
+body #works a:nth-of-type(1):hover {
+  color: yellow;
+  background-color: #5f2323;
+}
+body #works a:nth-of-type(2) {
+  font-family: Inter;
+  text-transform: uppercase;
+  color: #4E8E44;
+  background-color: #bbe5b5;
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+body #works a:nth-of-type(2):hover {
+  background-color: whitesmoke;
+  color: #8ab087;
+}
+body #works a:nth-of-type(3) {
+  background-color: #25235b;
+  color: whitesmoke;
+  text-transform: capitalize;
+}
+body #works a:nth-of-type(3) span {
+  font-family: fantasy;
+  color: yellow;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+body #works a:nth-of-type(4) {
+  background-color: whitesmoke;
+  color: black;
+  text-transform: capitalize;
+}
+body #works a:nth-of-type(4):hover {
+  background-color: rgb(43, 43, 43);
+  color: whitesmoke;
 }
 
 @media screen and (prefers-color-scheme: dark) {

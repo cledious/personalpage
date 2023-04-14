@@ -26,6 +26,7 @@ $brand__font-buttons:'Teko';
 body {
     background-color: #EEE7DB;
     padding: 0% 8%;
+    font-size
     #scroll-up {
         position: absolute;
         bottom: 80px;
@@ -109,30 +110,30 @@ body {
         .to-contact:hover input , .to-contact:hover button ,.to-contact:hover img{
             display:block;
         }
-        #search-btn {
-            background-color: #EEE7DB;
-            margin-left: 35%;
-            color: whitesmoke;
-            height: auto;
-            font-size: 20px;
-            padding: 10px;
-            border-radius: 20px;
-            width: 35px;
-            height: 35px;
+        #category {
+            background-color: $brand__color--red;
+            width: 10rem;
             display: flex;
-            img {
-                width: 100%;
+            flex-direction: column;
+            align-items: center;
+            text-transform: uppercase;
+            border-radius: 15px;
+        }
+        #categoryBox {
+            display: none;
+            position: absolute;
+            top: 3.5rem;
+            right: 23.7%;
+            flex-direction: column;
+            width: 10rem;
+            align-items: center;
+            a {
+                color: whitesmoke;
+                background-color: $brand__color--red;
+                margin: 1px;
+                padding: 5px 10px;
             }
         }
-        #search-btn:hover {
-            img {
-                transition: all 600ms;
-                filter: blur(18px);
-                filter: brightness(30%);
-                mix-blend-mode: luminosity;
-            }
-        }
-        
         #menu {
             box-sizing: border-box;
             @include clear-background;
@@ -270,23 +271,65 @@ body {
         height: auto;
         justify-content: space-around;
         gap: 5%;
-        article {
-            display: block;
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            div {
-                display: block;
-                background-color: $brand__color--red;
-                opacity: 0.5;
-                width: 50rem;
-                height: 30rem;
-                margin: auto;
-                justify-content: center;
-                align-items: center;
+        font-size: 30px;
+        a {
+            margin: 10px;
+            font-size: 2em;
+            text-align: center;
+            transition: all 300ms;
+        }
+        a:hover {
+            box-shadow: 0px 0px 30px $brand__color--purple;
+            border-radius: 30px;
+            transition: all 600ms;
+        }
+        a:nth-of-type(1) {
+            font-family: 'Times New Roman';
+            text-transform: uppercase;
+            color: #BDBC8A;
+            background-color: rgb(156, 71, 71);
+            letter-spacing: 20px;
+            span {
+                color: yellow;
+                font-size: 0.6em;
+                font-weight: lighter;
             }
+        }
+        a:nth-of-type(1):hover {
+            color: yellow;
+            background-color: #5f2323;
+        }
+        a:nth-of-type(2) {
+            font-family: Inter;
+            text-transform: uppercase;
+            color: #4E8E44;
+            background-color: #bbe5b5;
+            font-family: sans-serif;
+            font-weight: bolder;
+            text-transform: capitalize;
+        }
+        a:nth-of-type(2):hover {
+            background-color: whitesmoke;
+            color: #8ab087;
+        }
+        a:nth-of-type(3) {
+            background-color: #25235b;
+            color: whitesmoke;
+            text-transform: capitalize;
+            span {
+            font-family: fantasy;
+            color: yellow;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+        }
+        a:nth-of-type(4) {
+            background-color: whitesmoke;
+            color: black;
+            text-transform: capitalize;
+        }
+        a:nth-of-type(4):hover {
+            background-color: rgb(43, 43, 43);
+            color: whitesmoke;
         }
     }
 }
