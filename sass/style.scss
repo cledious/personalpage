@@ -26,7 +26,6 @@ $brand__font-buttons:'Teko';
 body {
     background-color: #EEE7DB;
     padding: 0% 8%;
-    font-size
     #scroll-up {
         position: absolute;
         bottom: 80px;
@@ -57,6 +56,7 @@ body {
             text-transform: uppercase;
             font-family: $brand__font-paragraphs;
             letter-spacing: 10px;
+            transition: all 600ms;
         }
         .to-contact {
             background-color: #D9D9D9;
@@ -67,6 +67,7 @@ body {
             border-radius: 50px;
             align-items: center;
             justify-content: center;
+            transition: all 600ms;
             img {
                 width: 50%;
                 transition: all 300ms;
@@ -118,6 +119,7 @@ body {
             align-items: center;
             text-transform: uppercase;
             border-radius: 15px;
+            transition: all 600ms;
         }
         #categoryBox {
             display: none;
@@ -215,6 +217,7 @@ body {
         display: flex;
         flex-direction: row;
         gap: 5%;
+        margin: 50px 0px;
         font-size: 30px;
         align-items: center;
         padding: 0% 12%;
@@ -265,16 +268,22 @@ body {
     }
     #works {
         display: flex;
-        flex-direction: column;
-        margin: 90px 0px;
-        width: 100%;
-        height: auto;
-        justify-content: space-around;
-        gap: 5%;
+        flex-flow: row wrap;
+        margin: auto;
+        padding: auto;
+        max-width: 700px;
+        min-width: min;
+        height: 600px;
         font-size: 30px;
         a {
-            margin: 10px;
-            font-size: 2em;
+            display: flex;
+            width: 260px;
+            height: 260px;
+            border-radius: 10%;
+            margin: auto;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 1em;
             text-align: center;
             transition: all 300ms;
         }
@@ -288,7 +297,7 @@ body {
             text-transform: uppercase;
             color: #BDBC8A;
             background-color: rgb(156, 71, 71);
-            letter-spacing: 20px;
+            letter-spacing: 0.05em;
             span {
                 color: yellow;
                 font-size: 0.6em;
@@ -353,7 +362,32 @@ body {
         }
     }
 }
+//================= mobile mode 
+@media screen and (max-width: 768px) {
+    body {
+        header{
+            #logo {
+                font-size: 1.3em;
+                transition: all 600ms;
+            }
+            #category {
+                width: 20px;
+                height: 20px;
+                font-size: 1px;
+                color: transparent;
+                transition: all 600ms;
 
+            }
+            .to-contact {
+                width: 20px;
+                height: 20px;
+                font-size: 1px;
+                color: transparent;
+                transition: all 600ms;
+            }
+        }
+    }
+}
 //================= animations
 
 @keyframes rotateall {
