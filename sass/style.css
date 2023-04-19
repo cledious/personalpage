@@ -49,37 +49,47 @@ body header .to-contact {
   border-radius: 50px;
   align-items: center;
   justify-content: center;
-  transition: all 600ms;
 }
-body header .to-contact img {
-  width: 50%;
-  transition: all 300ms;
-  filter: blur(18px);
-  filter: brightness(30%);
-  mix-blend-mode: luminosity;
+body header .to-contact #send-logo {
+  display: none;
+  margin: auto;
+  height: 90%;
+  filter: invert(38%) sepia(8%) saturate(3868%) hue-rotate(314deg) brightness(79%) contrast(76%);
 }
 body header .to-contact h3 {
-  color: #FFFFFF;
+  color: #904A4A;
   font-family: "K2D";
   line-height: 29px;
   font-size: 0.9em;
   font-weight: 400;
 }
-body header .to-contact button {
+body header .to-contact form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border-radius: 10%;
+  gap: 10px;
+}
+body header .to-contact form button {
+  background-color: rgb(238, 227, 227);
   padding: 10px;
   margin-bottom: 5px;
   text-transform: uppercase;
   font-weight: 600;
   font-size: "Teko";
 }
-body header .to-contact button:hover {
-  background-color: #241632;
+body header .to-contact form button:hover {
+  background-color: #301e41;
   color: whitesmoke;
+  filter: drop-shadow(10px);
 }
-body header .to-contact input {
+body header .to-contact form input {
   outline-color: #8A416D;
+  background-color: #353535;
 }
-body header .to-contact input, body header .to-contact button, body header .to-contact img {
+body header .to-contact form input, body header .to-contact form button, body header .to-contact form textarea {
   display: none;
 }
 body header .to-contact:hover {
@@ -89,34 +99,60 @@ body header .to-contact:hover {
   gap: 20px;
   top: 6rem;
   border-radius: 20px;
+  transition: all 6000ms;
 }
-body header .to-contact:hover input, body header .to-contact:hover button, body header .to-contact:hover img {
+body header .to-contact:hover input, body header .to-contact:hover button, body header .to-contact:hover textarea {
   display: block;
 }
-body header #category {
+body header .to-contact:hover #send-logo, body header .to-contact:hover h3 {
+  display: none;
+}
+body header #links {
+  z-index: 6;
   background-color: #904A4A;
+  border-radius: 15px;
+  height: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+body header #links img {
+  display: none;
+  margin: auto;
+  height: 90%;
+  filter: invert(100%);
+}
+body header #links #links-header {
   width: 10rem;
   display: flex;
+  font-size: 0.8em;
   flex-direction: column;
   align-items: center;
-  text-transform: uppercase;
-  border-radius: 15px;
   transition: all 600ms;
+  font-size: "Teko";
+  color: whitesmoke;
+  margin: auto;
 }
-body header #categoryBox {
+body header #links #links-body {
+  list-style: none;
   display: none;
   position: absolute;
   top: 3.5rem;
   right: 23.7%;
   flex-direction: column;
   width: 10rem;
-  align-items: center;
+  align-items: start;
 }
-body header #categoryBox a {
+body header #links #links-body li {
   color: whitesmoke;
   background-color: #904A4A;
   margin: 1px;
   padding: 5px 10px;
+}
+body header #links #links-body li a:nth-of-type(1) {
+  color: #241632;
+}
+body header #links #links-body li a:nth-of-type(2) {
+  color: #25235b;
 }
 body header #menu {
   box-sizing: border-box;
@@ -157,38 +193,14 @@ body header #menu li:hover .submenu {
   visibility: visible;
   opacity: 1;
 }
-body #search-box {
-  z-index: 3;
-  top: -20rem;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  background-color: #241632;
-  width: 60rem;
-  height: 2rem;
-  right: 15%;
-  transition: all 600ms;
-}
-body #search-box input {
-  width: 90%;
-  border: 0px;
-}
-body #search-box button {
-  width: 10%;
-  padding: 10px;
-}
-body #search-box button img {
-  width: 100%;
-  height: 100%;
-}
-body #cover {
-  z-index: 2;
+body #cov {
+  z-index: 5;
   position: fixed;
   left: 0px;
   top: 0px;
   width: 100vw;
   height: 100vh;
-  opacity: 0.5;
+  opacity: 0.9;
   background-color: #241632;
   display: none;
   transition: all 600ms;
@@ -338,16 +350,9 @@ body #works a:nth-of-type(4):hover {
     mix-blend-mode: multiply;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 890px) {
   body header #logo {
     font-size: 1.3em;
-    transition: all 600ms;
-  }
-  body header #category {
-    width: 20px;
-    height: 20px;
-    font-size: 1px;
-    color: transparent;
     transition: all 600ms;
   }
   body header .to-contact {
@@ -356,6 +361,20 @@ body #works a:nth-of-type(4):hover {
     font-size: 1px;
     color: transparent;
     transition: all 600ms;
+  }
+  body header .to-contact #send-logo {
+    display: block;
+  }
+  body header #links {
+    width: 20px;
+    height: 20px;
+    transition: all 600ms;
+  }
+  body header #links img {
+    display: block;
+  }
+  body header #links #links-header {
+    display: none;
   }
 }
 @keyframes rotateall {

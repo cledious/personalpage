@@ -1,6 +1,12 @@
-categoryBox = document.getElementById('categoryBox');
-category = document.getElementById('category').addEventListener('click',showoptions);
+categoryBox = document.getElementById('links-body');
+category = document.getElementById('links').addEventListener('click',showoptions);
+covering = document.getElementById('cov').addEventListener('click',covered);
 
 function showoptions () {
-    categoryBox.style.display = 'flex';
+    categoryBox.style.display = 'block';
+    covering.style.display = 'block';
+}
+function covered () {
+    categoryBox.style.display = 'none';
+    covering.style.display = 'none';
 }
