@@ -55,6 +55,7 @@ body header .to-contact #send-logo {
   margin: auto;
   height: 90%;
   filter: invert(38%) sepia(8%) saturate(3868%) hue-rotate(314deg) brightness(79%) contrast(76%);
+  margin-top: 30em;
 }
 body header .to-contact h3 {
   color: #904A4A;
@@ -153,6 +154,12 @@ body header #links #links-body li a:nth-of-type(1) {
 }
 body header #links #links-body li a:nth-of-type(2) {
   color: #25235b;
+}
+body header #links:hover img {
+  display: none;
+}
+body header #links:hover #links-body {
+  display: block;
 }
 body header #menu {
   box-sizing: border-box;
